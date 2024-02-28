@@ -1,0 +1,17 @@
+type Greeting {
+    greeting: String!
+}
+
+type User {
+    id: String!
+    name: String!
+}
+
+type Query {
+    myResolver(name: String!): Greeting!
+    user(id: String!): User
+}
+
+type Mutation {
+    createUser(name: String!): User
+}
